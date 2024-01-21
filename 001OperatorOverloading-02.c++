@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// Unary Operator Overloading +, -
+// Unary Operator Overloading + and -
 
 class Point{
     public:
