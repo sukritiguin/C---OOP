@@ -53,6 +53,15 @@ class Box{
         cout << "Default Constructor is called" << endl;
     }
 
+    // TODO : Copy Constructor
+
+    Box(Box &b){
+        this->length = b.length;
+        this->width = b.width;
+        this->height = b.height;
+        cout << "Copy Constructor is called.\n";
+    }
+
     // TODO : Parameterized constructor
     /*
     Box(int length, int width, int height){
@@ -90,6 +99,11 @@ class Box{
     */
 
     void printDetails(); // ? Membership Function defined outside of the class
+
+
+    ~Box(){
+        cout << "Destructor is called.\n";
+    }
 };
 
 void Box::printDetails(){
@@ -102,6 +116,8 @@ int main(){
     Box b1;
     Box b2(3,7,9);
     Box b3(10);
+
+    Box b4(b2);
 
 /* 
 
@@ -116,7 +132,27 @@ int main(){
     b1.printDetails();
     b2.printDetails();
     b3.printDetails();
+    b4.printDetails();
 
     return 0;
 }
 
+
+
+
+/*
+? Destructor
+
+    1. Destructor is named as ~ClassName(); with a tilde (~) followed by the class name.
+    2. Automatically invoked when an object goes out of scope or is explicitly deleted using delete.
+    3. No return type or parameters in the destructor's declaration and definition.
+    4. A class can have only one destructor, and its name is fixed based on the class name.
+    5. Destructors cannot be overloaded with different parameter lists.
+    6. Destructors are called in reverse order of object creation, with the last object created being the first to have its destructor called.
+    7. Destructors are typically not explicitly called by the programmer and are automatically invoked by the system.
+    8. Destructors are essential for releasing resources acquired by the object during its lifetime, preventing memory leaks, and ensuring proper cleanup.
+    9. If no destructor is provided, the compiler generates a default one, which does not perform any specific cleanup.
+    10. It's a good practice to provide an explicitly defined destructor if the class manages resources requiring specific cleanup.
+
+
+*/
