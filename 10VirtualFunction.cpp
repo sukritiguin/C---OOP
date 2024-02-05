@@ -9,6 +9,7 @@ class Base{
         void display(){
             cout << "Base Display Function\n";
         }
+        virtual void pureVirtualFunction() = 0;
 };
 
 class Derived : public Base{
@@ -55,5 +56,6 @@ int main(){
     *  In early binding, the decision about which function or method to call is made 
     * by the compiler based on the static type of the object or reference, rather than
     * its dynamic type at runtime.
-
+- Pure virtual function
+    virtual void pureVirtualFunction() = 0;
 */
