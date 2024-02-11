@@ -55,7 +55,7 @@ int main(){
 
 /*
 Operators that can not be overloaded :
-1. :: -> Sxore Resolution Operator
+1. :: -> Scope Resolution Operator
 2. ?: -> Ternary Operator
 3. . -> Dot Operator
 4. .* -> Pointer Operator

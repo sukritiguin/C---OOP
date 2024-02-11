@@ -35,7 +35,8 @@ int main(){
     p2.print();
     p2[1] = 12;
     p2.print();
-    p2[2]=40;
+    // p2[2]=40;
+    cout << "p2 at 1st position: " << p2[1] << endl;
     cout << "End....";
 
 

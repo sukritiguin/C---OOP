@@ -26,7 +26,7 @@ class Point{
         }
 
         friend ostream& operator<<(ostream& os, const Point& p);
-        friend istream& operator<<(istream& is, Point& p);
+        friend istream& operator>>(istream& is, Point& p);
 };
 
 ostream& operator<<(ostream& os, const Point& p){
